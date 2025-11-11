@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: "Master Critical Thinking & Professional Skills",
     images: ["/logo.png"],
   },
-    generator: 'v0.app'
+    generator: 'quachthanhlong.com'
 }
 
 export default function RootLayout({

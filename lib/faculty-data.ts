@@ -26,6 +26,7 @@ export const facultyData: Faculty[] = [
     expertise: ["Leadership Development", "Strategic Planning", "Innovation Management", "Corporate Training"],
     languages: ["Vietnamese", "English"],
     bio: "Distinguished professional with extensive academic and corporate experience, providing exceptional thought leadership and guidance.",
+    image: "/dr_VTH.png",
   },
   {
     id: "pham-quang-hung",
@@ -39,6 +40,7 @@ export const facultyData: Faculty[] = [
     expertise: ["Real Estate Development", "Corporate Management", "Business Strategy", "Executive Leadership"],
     languages: ["Vietnamese", "English"],
     bio: "Senior business leader with deep expertise in corporate management and strategic development.",
+    image: "/master_PQH.png",
   },
 
   // Master (Level 2)
@@ -54,6 +56,7 @@ export const facultyData: Faculty[] = [
     expertise: ["Curriculum Development", "Academic Excellence", "Educational Innovation", "Assessment & Evaluation"],
     languages: ["Vietnamese", "English"],
     bio: "Academic leader dedicated to developing world-class educational methodologies and student success.",
+    image: "/dr_THA.png",
   },
   {
     id: "hoang-kim-duong",
@@ -67,6 +70,7 @@ export const facultyData: Faculty[] = [
     expertise: ["Program Management", "Organizational Development", "Team Leadership", "Process Optimization"],
     languages: ["Vietnamese", "English"],
     bio: "Operations leader with proven expertise in program management and organizational excellence.",
+    image: "/master_HKD.png",
   },
   {
     id: "cao-tuan-minh",
@@ -80,6 +84,7 @@ export const facultyData: Faculty[] = [
     expertise: ["Talent Development", "HR Strategy", "Sales Training", "Performance Management"],
     languages: ["Vietnamese", "English"],
     bio: "HR and talent development specialist with expertise in building high-performance teams.",
+    image: "/master_CTM.png",
   },
   {
     id: "tran-quang-tuan",
@@ -93,6 +98,7 @@ export const facultyData: Faculty[] = [
     expertise: ["Learning & Development", "Corporate Training", "Change Management", "Employee Engagement"],
     languages: ["Vietnamese", "English"],
     bio: "L&D specialist focused on transforming organizational learning and employee development.",
+    image: "/master_TQT.png",
   },
 
   // Senior Trainer (Level 3)
@@ -108,6 +114,7 @@ export const facultyData: Faculty[] = [
     expertise: ["IT Management", "Technical Training", "Digital Transformation", "Software Development"],
     languages: ["Vietnamese", "English"],
     bio: "Technology leader delivering high-quality technical training and digital innovation.",
+    image: "/master_HQV.png",
   },
 ]
 
