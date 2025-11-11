@@ -1,3 +1,7 @@
+// ==============================
+// Facility Configuration Types & Data
+// ==============================
+
 export interface FacilityConfiguration {
   id: string
   name: string
@@ -7,6 +11,7 @@ export interface FacilityConfiguration {
   features: string[]
   perfectFor: string[]
   description: string
+  image?: string
 }
 
 export const facilityConfigurations: FacilityConfiguration[] = [
@@ -32,10 +37,11 @@ export const facilityConfigurations: FacilityConfiguration[] = [
     ],
     description:
       "Set up with individual student computers and a clear view of the front screen, this layout is ideal for hands-on workshops and software-based learning. Participants can follow along on their own computers while receiving expert instruction.",
+    image: "/images/facility/computer-training.jpg", // ✅ nên đặt trong thư mục /public/images/facility
   },
   {
     id: "collaborative-meeting",
-    name: "Professional Skills/Collaborative Meeting Room Layout",
+    name: "Professional Skills / Collaborative Meeting Room Layout",
     capacity: 24,
     squareFeet: 800,
     layout: "Open, flexible arrangement with tables for collaboration",
@@ -55,6 +61,7 @@ export const facilityConfigurations: FacilityConfiguration[] = [
     ],
     description:
       "Designed as a flexible, professional meeting space that encourages discussion and interaction. Tables are arranged for easy collaboration and strong group dynamics, perfect for creating an engaging learning environment.",
+    image: "/images/facility/collaborative-meeting.png",
   },
   {
     id: "boardroom-conference",
@@ -64,7 +71,7 @@ export const facilityConfigurations: FacilityConfiguration[] = [
     layout: "Formal U-shape boardroom configuration",
     features: [
       "U-shape table arrangement",
-      "Excellent visibility for all",
+      "Excellent visibility for all participants",
       "Projector and screen",
       "Whiteboard",
       "High-speed internet",
@@ -77,14 +84,19 @@ export const facilityConfigurations: FacilityConfiguration[] = [
       "Board discussions",
     ],
     description:
-      "This formal layout creates a professional boardroom environment that provides wonderful space for meetings, presentations, and face-to-face dialogue, offering excellent visibility for all participants.",
+      "This formal layout creates a professional boardroom environment that provides an excellent space for meetings, presentations, and face-to-face dialogue, ensuring visibility and engagement for all participants.",
+    image: "/images/facility/boardroom-conference.jpg",
   },
 ]
+
+// ==============================
+// Facility Info Summary
+// ==============================
 
 export const facilityInfo = {
   name: "Our Professional Learning Hub in Ottawa",
   tagline:
-    "As part of our Joint Venture, Thinking School Canada utilizes the bright, modern facility located in the heart of downtown Ottawa",
+    "As part of our Joint Venture, Thinking School Canada utilizes the bright, modern facility located in the heart of downtown Ottawa.",
   address: "130 Albert Street, Downtown Ottawa",
   description:
     "Ensuring a high-quality, stress-free experience for all our Canadian programs with professional meeting and training spaces.",
