@@ -7,6 +7,7 @@ import { BackToTop } from "@/components/back-to-top"
 import { Award, Users, BookOpen, MapPin, Zap, CheckCircle2, Wifi, Coffee } from "lucide-react"
 import { facultyData, facultyLevels } from "@/lib/faculty-data"
 import { facilityConfigurations, facilityInfo } from "@/lib/facilities-data"
+import Image from "next/image"
 
 export default function AboutPage() {
   const [locale, setLocale] = useState<"en" | "vi">("en")
@@ -44,27 +45,39 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <div className="grid md:grid-cols-2 gap-12 items-center animate-fadeInUp">
-            <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-foreground">Our Mission</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                At Thinking School Canada, we believe that critical thinking is the foundation of personal and
-                professional success. Our mission is to inspire, educate, and empower individuals to become innovative
-                thinkers who can navigate complex challenges with clarity and creativity.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We are committed to providing world-class education that transforms how people think, learn, and grow.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg h-64 flex items-center justify-center">
-              <Award className="w-32 h-32 text-primary/30" />
-            </div>
-          </div>
+        {/* Mission */}
+<section className="py-20 px-4">
+  <div className="max-w-4xl mx-auto space-y-12">
+    <div className="grid md:grid-cols-2 gap-12 items-center animate-fadeInUp">
+      <div>
+        <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-foreground">
+          Our Mission
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+          At Thinking School Canada, we believe that critical thinking is the foundation of personal and
+          professional success. Our mission is to inspire, educate, and empower individuals to become innovative
+          thinkers who can navigate complex challenges with clarity and creativity.
+        </p>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          We are committed to providing world-class education that transforms how people think, learn, and grow.
+        </p>
+      </div>
 
-          {/* Stats */}
+      {/* ✅ Thay icon bằng logo */}
+      <div className="relative bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg h-64 flex items-center justify-center overflow-hidden">
+        {/* Vòng sáng hiệu ứng nhẹ */}
+        <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full animate-pulse" />
+        <Image
+          src="/logo.png"
+          alt="Thinking School Canada Logo"
+          width={180}
+          height={180}
+          className="relative z-10 object-contain opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-500 drop-shadow-lg"
+          priority
+        />
+      </div>
+    </div>
+            {/* Stats */}
           <div className="grid md:grid-cols-3 gap-8 pt-12">
             {[
               { label: "Students Helped", value: "15,000+" },
