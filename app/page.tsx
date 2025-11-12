@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { BackToTop } from "@/components/back-to-top"
@@ -84,13 +85,25 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background"></div>
+        {/* Background image */}
+        <Image
+          src="/hero-bg.jpg"
+          alt="Hero background"
+          fill
+          priority
+          className="object-cover object-center opacity-60"
+        />
+        {/* Overlay gradient để chữ nổi hơn */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/90"></div>
 
+        {/* Hero Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8 animate-fadeInUp">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight text-balance">
+          <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground leading-tight text-balance drop-shadow-lg">
             {t.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">{t.hero.subtitle}</p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance drop-shadow">
+            {t.hero.subtitle}
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Link
               href="/courses"
@@ -136,6 +149,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Programs Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">

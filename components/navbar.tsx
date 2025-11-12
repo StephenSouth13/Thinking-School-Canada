@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X, Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { LanguageSwitcher } from "./language-switcher"
+import Image from "next/image"
 
 interface NavbarProps {
   locale?: "en" | "vi"
@@ -56,14 +57,25 @@ export function Navbar({ locale = "en", onLocaleChange }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 animate-slideIn">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-serif font-bold text-lg">T</span>
-            </div>
-            <span className="hidden sm:inline font-serif font-bold text-lg md:text-xl text-foreground">
-              Thinking School
-            </span>
-          </Link>
+<Link href="/" className="flex items-center gap-2 animate-slideIn">
+  {/* Logo hình cờ Canada (hoặc logo thật của trường anh) */}
+  <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+    <Image
+      src="/canada_flag.png"
+      alt="Thinking School Canada Logo"
+      width={32}
+      height={32}
+      className="object-cover"
+      priority
+    />
+  </div>
+
+  {/* Tên thương hiệu */}
+  <span className="hidden sm:inline font-serif font-bold text-lg md:text-xl text-foreground">
+    Thinking School <span className="text-red-600">Canada</span>
+  </span>
+</Link>
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">

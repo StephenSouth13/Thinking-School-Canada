@@ -54,13 +54,9 @@ export default function AboutPage() {
           Our Mission
         </h2>
         <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-          At Thinking School Canada, we believe that critical thinking is the foundation of personal and
-          professional success. Our mission is to inspire, educate, and empower individuals to become innovative
-          thinkers who can navigate complex challenges with clarity and creativity.
+         Thinking School Canada is a collaborative venture between Thinking School Vietnam and its Canadian partner, The Great Canadian Training & Consulting Company. Our mission is to provide high-quality online and blended learning programs for Vietnamese professionals and international learners who prefer studying in Vietnamese. 
         </p>
-        <p className="text-lg text-muted-foreground leading-relaxed">
-          We are committed to providing world-class education that transforms how people think, learn, and grow.
-        </p>
+        
       </div>
 
       {/* ✅ Thay icon bằng logo */}
